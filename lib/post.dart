@@ -6,6 +6,7 @@ class Post extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String textnum = 'Bilukondayoor123645779';
     TextEditingController text = TextEditingController();
     return Scaffold(
       body: Column(
@@ -17,7 +18,9 @@ class Post extends StatelessWidget {
           IconButton(
               onPressed: () {
                 print(text.text);
-                Firebasedat().creatUser(name: text.text);
+                Firebasedat().creatUser(
+                  name: textnum,
+                );
               },
               icon: Icon(Icons.av_timer))
         ],
